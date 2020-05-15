@@ -1,10 +1,6 @@
 node {
     def app
 
-    environment {
-        PATH = "$PATH:/usr/local/bin"
-    }
-
     stage('Clone repository') {
         checkout scm
     }
@@ -23,11 +19,11 @@ node {
 
     stage('Clear old version') {
         echo "Running source code in a fully containerized environment..."    
-        sh 'docker-compose down -v'
+        sh '/usr/local/bin/docker-compose down -v'
     }
 
     stage('Deploy Source Code') {
         echo "Running source code in a fully containerized environment..."    
-        sh 'docker-compose up -d --build'
+        sh '/usr/local/bin/docker-compose up -d --build'
     }
 }
