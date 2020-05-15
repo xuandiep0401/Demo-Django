@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("djangobasic:${env.BUILD_ID}", "./app/Dockerfile")
+        app = docker.build("djangobasic:${env.BUILD_ID}", "./app/")
     }
 
     stage('Run Test Django') {
