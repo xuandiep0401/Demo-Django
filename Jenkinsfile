@@ -11,7 +11,7 @@ node {
 
     stage('Run Test Django') {
         app.inside {
-            sh 'ls'
+            sh 'cd app/'
             sh 'python manage.py test'
         }
     }
