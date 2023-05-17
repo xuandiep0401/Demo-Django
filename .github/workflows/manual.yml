@@ -20,4 +20,4 @@ jobs:
           # Commands to execute on the remote host
           cd /home/tannp/
           pwd
-          docker-compose up -d
+          whoami
