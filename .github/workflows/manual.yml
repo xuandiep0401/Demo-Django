@@ -19,5 +19,5 @@ jobs:
         script: |
           # Commands to execute on the remote host
           cd /home/tannp/
-          git pull
+          pwd
           docker-compose up -d
