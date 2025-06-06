@@ -19,5 +19,6 @@ from dashboards import views
 
 urlpatterns = [
     path('', views.index),
+    path('weather/', views.weather),
     path('admin/', admin.site.urls),
 ]
